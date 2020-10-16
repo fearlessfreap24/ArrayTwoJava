@@ -118,10 +118,61 @@ public class Methods1 {
 		for ( int i = 0; i < nums.length; i++ ) {
 			int numsi = nums[i];
 			if ( is2 && nums[i] == 2 ) return true;
+			else if ( is2 && nums[i] != 2 ) is2 = nums[i] == 2;
 			if ( !is2 ) is2 = nums[i] == 2;
 		}
 		
 		return false;
 	}
 
+	public boolean lucky13(int[] nums) {
+
+//		Given an array of ints, return true if the array contains no 1's and no 3's.
+//
+//		lucky13([0, 2, 4]) → true
+//		lucky13([1, 2, 3]) → false
+//		lucky13([1, 2, 4]) → false
+
+		for ( int i = 0; i < nums.length; i++ ){
+			if ( nums[i] == 1 || nums[i] == 3 ) return false;
+		}
+		return true;
+	}
+
+	public boolean sum28(int[] nums) {
+
+//		Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
+//
+//		sum28([2, 3, 2, 2, 4, 2]) → true
+//		sum28([2, 3, 2, 2, 4, 2, 2]) → false
+//		sum28([1, 2, 3, 4]) → false
+
+		int sum2 = 0;
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 2 ) sum2 += nums[i];
+		}
+
+		return sum2 == 8;
+
+	}
+
+	public boolean more14(int[] nums) {
+
+//		Given an array of ints, return true if the number of 1's is greater than the number of 4's
+//
+//		more14([1, 4, 1]) → true
+//		more14([1, 4, 1, 4]) → false
+//		more14([1, 1]) → true
+
+		int sum1 = 0;
+		int sum4 = 0;
+
+		for ( int i = 0; i < nums.length; i++ ){
+			if ( nums[i] == 1 ) sum1++;
+			if ( nums[i] == 4 ) sum4++;
+		}
+
+		return sum1 > sum4;
+
+	}
 }

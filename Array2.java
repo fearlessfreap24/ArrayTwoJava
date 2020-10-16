@@ -37,9 +37,24 @@ public class Array2 {
 //			System.out.printf("nums = %s : %d\n", Arrays.toString(nums), m1.sum67(nums));
 //		}
 		
-		int[][] nums6 = { {1, 2, 2}, {1, 2, 1, 2}, {2, 1, 2} };
-		for ( int[] nums : nums6 ) {
-			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.has22(nums));
+//		int[][] nums6 = { {1, 2, 2}, {1, 2, 1, 2}, {2, 1, 2} };
+//		for ( int[] nums : nums6 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.has22(nums));
+//		}
+
+//		int[][] nums7 = { {0,2,4}, {1, 2, 3}, {1, 2, 4} };
+//		for ( int[] nums : nums7 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.lucky13(nums));
+//		}
+
+//		int[][] nums8 = { {2, 3, 2, 2, 4, 2}, {2, 3, 2, 2, 4, 2, 2}, {1, 2, 3, 4} };
+//		for ( int[] nums : nums8 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.sum28(nums));
+//		}
+
+		int[][] nums9 = { {1, 4, 1}, {1, 4, 1, 4}, {1, 1} };
+		for ( int[] nums : nums9 ) {
+			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.more14(nums));
 		}
 		
 	}
