@@ -52,10 +52,27 @@ public class Array2 {
 //			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.sum28(nums));
 //		}
 
-		int[][] nums9 = { {1, 4, 1}, {1, 4, 1, 4}, {1, 1} };
-		for ( int[] nums : nums9 ) {
-			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.more14(nums));
+//		int[][] nums9 = { {1, 4, 1}, {1, 4, 1, 4}, {1, 1} };
+//		for ( int[] nums : nums9 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.more14(nums));
+//		}
+
+//		int[] nums10 = { 4, 1, 10 };
+//		for ( int n : nums10 ) {
+//			System.out.printf("n = %d : %s\n", n, Arrays.toString(m1.fizzArray(n)));
+//		}
+
+//		int[][] nums11 = { {1, 4, 1, 4}, {1, 4, 2, 4}, {1, 1} };
+//		for ( int[] nums : nums11 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.only14(nums));
+//		}
+
+		int[] nums12 = { 4, 10, 2 };
+		for ( int n : nums12 ) {
+			System.out.printf("n = %d : %s\n", n, Arrays.toString(m1.fizzArray2(n)));
 		}
+
+//		nums18 starts m2
 		
 	}
 

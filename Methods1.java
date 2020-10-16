@@ -175,4 +175,59 @@ public class Methods1 {
 		return sum1 > sum4;
 
 	}
+
+	public int[] fizzArray(int n) {
+
+//		Given a number n, create and return a new int array of length n, containing the numbers 0, 1,
+//		2, ... n-1. The given n may be 0, in which case just return a length 0 array. You do not need
+//		a separate if-statement for the length-0 case; the for-loop should naturally execute 0 times
+//		in that case, so it just works. The syntax to make a new int array is: new int[desired_length]
+//		(See also: FizzBuzz Code)
+//
+//		fizzArray(4) → [0, 1, 2, 3]
+//		fizzArray(1) → [0]
+//		fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+		int[] fizzarr = new int[n];
+		for ( int i = 0; i < n; i++ ) {
+			fizzarr[i] = i;
+		}
+
+		return fizzarr;
+	}
+
+	public boolean only14(int[] nums) {
+
+//		Given an array of ints, return true if every element is a 1 or a 4.
+//
+//		only14([1, 4, 1, 4]) → true
+//		only14([1, 4, 2, 4]) → false
+//		only14([1, 1]) → true
+
+		int count14 = 0;
+		for ( int i = 0; i < nums.length; i++ ){
+			if ( nums[i] == 1 || nums[i] == 4 ) count14++;
+		}
+
+		return count14 == nums.length;
+	}
+
+	public String[] fizzArray2(int n) {
+
+//		Given a number n, create and return a new string array of length n, containing the strings "0",
+//		"1" "2" .. through n-1. N may be 0, in which case just return a length 0 array. Note:
+//		String.valueOf(xxx) will make the String form of most types. The syntax to make a new string array
+//		is: new String[desired_length]  (See also: FizzBuzz Code)
+//
+//		fizzArray2(4) → ["0", "1", "2", "3"]
+//		fizzArray2(10) → ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+//		fizzArray2(2) → ["0", "1"]
+
+		String[] fizzarr = new String[n];
+		for ( int i = 0; i < n; i++ ) {
+			fizzarr[i] = Integer.toString(i);
+		}
+
+		return fizzarr;
+	}
 }
