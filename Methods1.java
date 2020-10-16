@@ -64,4 +64,64 @@ public class Methods1 {
 		return (sum - max - min)/(nums.length - 2);
 	}
 
+	public int sum13(int[] nums) {
+
+//		Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very 
+//		unlucky, so it does not count and numbers that come immediately after a 13 also do not count.
+//
+//		sum13([1, 2, 2, 1]) → 6
+//		sum13([1, 1]) → 2
+//		sum13([1, 2, 2, 1, 13]) → 6
+		
+		int sum = 0;
+		int indexOf13 = Integer.MIN_VALUE;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 13 ) indexOf13 = i + 1;
+			else if ( i == indexOf13 ) continue;
+			else sum += nums[i];
+		}
+		
+		return sum;
+	}
+
+	public int sum67(int[] nums) {
+
+//		Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending 
+//		to the next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.
+//
+//		sum67([1, 2, 2]) → 5
+//		sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+//		sum67([1, 1, 6, 7, 2]) → 4
+		
+		boolean is6 = false;
+		int sum = 0;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 6 ) is6 = true;
+			else if ( nums[i] == 7  && is6 ) is6 = false;
+			else if ( !is6 ) sum += nums[i];
+		}
+		return sum;
+	}
+
+	public boolean has22(int[] nums) {
+
+//		Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
+//
+//		has22([1, 2, 2]) → true
+//		has22([1, 2, 1, 2]) → false
+//		has22([2, 1, 2]) → false
+		
+		boolean is2 = false;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			int numsi = nums[i];
+			if ( is2 && nums[i] == 2 ) return true;
+			if ( !is2 ) is2 = nums[i] == 2;
+		}
+		
+		return false;
+	}
+
 }
