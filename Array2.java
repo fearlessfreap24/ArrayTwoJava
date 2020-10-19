@@ -103,11 +103,30 @@ public class Array2 {
 
 //		nums18 starts m2
 		
-		int[][] nums18 = { {1, 3, 2}, {3, 1, 2}, {3, 1, 4, 5, 2} };
-		for ( int[] nums : nums18 ) {
-			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m2.has12(nums));
+//		int[][] nums18 = { {1, 3, 2}, {3, 1, 2}, {3, 1, 4, 5, 2} };
+//		for ( int[] nums : nums18 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m2.has12(nums));
+//		}
+		
+//		int[][] nums19 = { {2, 1, 3, 5}, {2, 1, 2, 5}, {2, 4, 2, 5} };
+//		for ( int[] nums : nums19 ) {
+//			System.out.printf("nums = %s : %b\n", ats(nums), m2.modThree(nums));
+//		}
+		
+//		int[][] nums20 = { {3, 1, 3, 1, 3}, {3, 1, 3, 3}, {3, 4, 3, 3, 4}, {1, 3, 3, 1, 3} } ;
+//		for ( int[] nums : nums20 ) {
+//			System.out.printf("nums = %s : %b\n", ats(nums), m2.haveThree(nums));
+//		}
+		
+		int[][] nums21 = { {4, 2, 2, 3}, {2, 2, 4}, {2, 2, 4, 2}, {1, 2, 3, 4} };
+		for ( int[] nums : nums21 ) {
+			System.out.printf("nums = %s : %b\n", ats(nums), m2.twoTwo(nums));	
 		}
 		
+	}
+	
+	private String ats(int[] nums) {
+		return Arrays.toString(nums);
 	}
 
 }
