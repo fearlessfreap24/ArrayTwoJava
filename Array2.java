@@ -118,9 +118,27 @@ public class Array2 {
 //			System.out.printf("nums = %s : %b\n", ats(nums), m2.haveThree(nums));
 //		}
 		
-		int[][] nums21 = { {4, 2, 2, 3}, {2, 2, 4}, {2, 2, 4, 2}, {1, 2, 3, 4} };
-		for ( int[] nums : nums21 ) {
-			System.out.printf("nums = %s : %b\n", ats(nums), m2.twoTwo(nums));	
+//		int[][] nums21 = { {4, 2, 2, 3}, {2, 2, 4}, {2, 2, 4, 2}, {1, 2, 3, 4} };
+//		for ( int[] nums : nums21 ) {
+//			System.out.printf("nums = %s : %b\n", ats(nums), m2.twoTwo(nums));	
+//		}
+		
+//		int[][] nums22 = { {5, 6, 45, 99, 13, 5, 6}, {5, 6, 45, 99, 13, 5, 6}, {5, 6, 45, 99, 13, 5, 6} };
+//		int[] lens22 = { 1, 2, 3 };
+//		for ( int i = 0; i < lens22.length; i++ ) {
+//			System.out.printf("nums = %s, len = %d : %b\n", ats(nums22[i]), lens22[i],
+//					m2.sameEnds(nums22[i], lens22[i]));
+//		}
+		
+//		int[][] nums23 = { {1, 4, 5, 6, 2}, { 1, 2, 3}, {1, 2, 4} };
+//		for ( int[] nums : nums23 ) {
+//			System.out.printf("nums = %s : %b\n", ats(nums), m2.tripleUp(nums));
+//		}
+		
+		int[][] nums24 = { {5, 10}, {11, 18}, {1, 3} };
+		for ( int[] nums : nums24 ) {
+			System.out.printf("start = %d, end = %d : %s\n", nums[0], nums[1],
+					ats(m2.fizzArray3(nums[0], nums[1])));
 		}
 		
 	}
