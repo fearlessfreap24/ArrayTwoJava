@@ -288,4 +288,50 @@ public class Methods1 {
 		}
 		return ( twos && !fours ) || ( !twos && fours );
 	}
+
+	public int matchUp(int[] nums1, int[] nums2) {
+		
+//		Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding element 
+//		in nums2 (at the same index). Return the count of the number of times that the two elements differ by 2 or less, 
+//		but are not equal.
+//
+//		matchUp([1, 2, 3], [2, 3, 10]) → 2
+//		matchUp([1, 2, 3], [2, 3, 5]) → 3
+//		matchUp([1, 2, 3], [2, 3, 3]) → 2
+		
+		int matchup = 0;
+		
+		for ( int i = 0; i < nums1.length; i++ ) {
+			int oneMinusTwo = Math.abs(nums1[i] - nums2[i]);
+			if ( oneMinusTwo <= 2 && oneMinusTwo != 0 ) matchup++;
+		}
+		
+		return matchup;
+	}
+
+	public boolean has77(int[] nums) {
+
+//		Given an array of ints, return true if the array contains two 7's next to each other, or there are two 7's separated 
+//		by one element, such as with {7, 1, 7}.
+//
+//		has77([1, 7, 7]) → true
+//		has77([1, 7, 1, 7]) → true
+//		has77([1, 7, 1, 1, 7]) → false
+		
+		if ( nums.length < 2 ) return false;
+		
+		int indexOf7 = Integer.MIN_VALUE;
+		boolean is77 = false;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 7 && indexOf7 == Integer.MIN_VALUE ) indexOf7 = i;
+			else if ( nums[i] == 7 ) {
+				is77 = (i == indexOf7 + 1) || (i == indexOf7 + 2);
+				indexOf7 = i;
+			}
+			if ( is77 ) return is77;
+		}
+		
+		return is77;
+	}
 }

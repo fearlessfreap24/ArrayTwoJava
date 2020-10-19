@@ -84,12 +84,29 @@ public class Array2 {
 //					m1.isEverywhere(nums14[i], vals14[i]));
 //		}
 		
-		int[][] nums15 = { {1, 2, 2}, {4, 4, 1}, {4, 4, 1, 2, 2} };
-		for ( int[] nums : nums15 ) {
-			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.either24(nums));
-		}
+//		int[][] nums15 = { {1, 2, 2}, {4, 4, 1}, {4, 4, 1, 2, 2} };
+//		for ( int[] nums : nums15 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.either24(nums));
+//		}
+		
+//		int [][][] nums16 = { { {1, 2, 3}, {2, 3, 10} }, { {1, 2, 3}, {2, 3, 5} }, { {1, 2, 3}, {2, 3, 3} } };
+//		for ( int[][] nums : nums16 ) {
+//			System.out.printf("nums1 = %s, nums2 = %s : %d\n", Arrays.toString(nums[0]), Arrays.toString(nums[1]), 
+//					m1.matchUp(nums[0], nums[1]));
+//		}
+		
+//		int [][] nums17 = { {1, 7, 7}, {1, 7, 1, 7}, {1, 7, 1, 1, 7}, {7, 1, 7}, 
+//				{7, 7, 1, 1, 7}, {2, 7, 2, 2, 7, 7}, {7, 7, 1, 1, 7}, {7, 2, 7, 2, 2, 7} };
+//		for ( int[] nums : nums17 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.has77(nums));
+//		}
 
 //		nums18 starts m2
+		
+		int[][] nums18 = { {1, 3, 2}, {3, 1, 2}, {3, 1, 4, 5, 2} };
+		for ( int[] nums : nums18 ) {
+			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m2.has12(nums));
+		}
 		
 	}
 
