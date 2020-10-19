@@ -230,4 +230,62 @@ public class Methods1 {
 
 		return fizzarr;
 	}
+
+	public boolean no14(int[] nums) {
+
+//		Given an array of ints, return true if it contains no 1's or it contains no 4's.
+//
+//		no14([1, 2, 3]) → true
+//		no14([1, 2, 3, 4]) → false
+//		no14([2, 3, 4]) → true
+		
+		boolean ones = false;
+		boolean fours = false;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 1 ) ones = true;
+			if ( nums[i] == 4 ) fours = true;
+		}
+		return !ones || !fours;
+	}
+
+	public boolean isEverywhere(int[] nums, int val) {
+		
+//		We'll say that a value is "everywhere" in an array if for every pair of adjacent elements in the array, 
+//		at least one of the pair is that value. Return true if the given value is everywhere in the array.
+//
+//		isEverywhere([1, 2, 1, 3], 1) → true
+//		isEverywhere([1, 2, 1, 3], 2) → false
+//		isEverywhere([1, 2, 1, 3, 4], 1) → false
+		
+		boolean iseverywhere = false;
+		if ( nums.length < 2 ) return true;
+		
+		for ( int i = 0; i < nums.length - 1; i++ ) {
+			iseverywhere = nums[i] == val || nums[i+1] == val;
+			if ( i > 1 && !iseverywhere ) return false;
+		}
+		
+		return iseverywhere;
+	}
+
+	public boolean either24(int[] nums) {
+
+//		Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.//
+//
+//		either24([1, 2, 2]) → true
+//		either24([4, 4, 1]) → true
+//		either24([4, 4, 1, 2, 2]) → false
+		
+		boolean twos = false;
+		boolean fours = false;
+		
+		if ( nums.length < 2 ) return false;
+		
+		for ( int i = 0; i < nums.length - 1; i++ ) {
+			if ( !twos ) twos = nums[i] == 2 && nums[i+1] == 2;
+			if ( !fours ) fours = nums[i] == 4 && nums[i+1] == 4;
+		}
+		return ( twos && !fours ) || ( !twos && fours );
+	}
 }

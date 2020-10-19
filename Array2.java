@@ -67,9 +67,26 @@ public class Array2 {
 //			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.only14(nums));
 //		}
 
-		int[] nums12 = { 4, 10, 2 };
-		for ( int n : nums12 ) {
-			System.out.printf("n = %d : %s\n", n, Arrays.toString(m1.fizzArray2(n)));
+//		int[] nums12 = { 4, 10, 2 };
+//		for ( int n : nums12 ) {
+//			System.out.printf("n = %d : %s\n", n, Arrays.toString(m1.fizzArray2(n)));
+//		}
+		
+//		int[][] nums13 = { {1, 2, 3}, {1, 2, 3, 4}, {2, 3, 4} };
+//		for ( int[] nums : nums13 ) {
+//			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.no14(nums));
+//		}
+		
+//		int[][] nums14 = { {1, 2, 1, 3}, {1, 2, 1, 3}, {1, 2, 1, 3, 4} };
+//		int[] vals14 = { 1, 2, 1 };
+//		for ( int i = 0; i < nums14.length; i++ ) {
+//			System.out.printf("nuns = %s, val = %d : %b\n", Arrays.toString(nums14[i]), vals14[i],
+//					m1.isEverywhere(nums14[i], vals14[i]));
+//		}
+		
+		int[][] nums15 = { {1, 2, 2}, {4, 4, 1}, {4, 4, 1, 2, 2} };
+		for ( int[] nums : nums15 ) {
+			System.out.printf("nums = %s : %b\n", Arrays.toString(nums), m1.either24(nums));
 		}
 
 //		nums18 starts m2
