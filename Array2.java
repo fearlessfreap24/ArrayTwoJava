@@ -135,10 +135,25 @@ public class Array2 {
 //			System.out.printf("nums = %s : %b\n", ats(nums), m2.tripleUp(nums));
 //		}
 		
-		int[][] nums24 = { {5, 10}, {11, 18}, {1, 3} };
-		for ( int[] nums : nums24 ) {
-			System.out.printf("start = %d, end = %d : %s\n", nums[0], nums[1],
-					ats(m2.fizzArray3(nums[0], nums[1])));
+//		int[][] nums24 = { {5, 10}, {11, 18}, {1, 3} };
+//		for ( int[] nums : nums24 ) {
+//			System.out.printf("start = %d, end = %d : %s\n", nums[0], nums[1],
+//					ats(m2.fizzArray3(nums[0], nums[1])));
+//		}
+		
+//		int[][] nums25 = { {6, 2, 5, 3}, {1, 2}, {1} };
+//		for ( int[] nums : nums25 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.shiftLeft(nums)));
+//		}
+		
+//		int[][] nums26 = { {2, 10, 3, 4, 20, 5}, {10, 1, 20, 2}, {10, 1, 9, 20} };
+//		for ( int[] nums : nums26 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.tenRun(nums)));
+//		}
+		
+		int[][] nums27 = { {1, 2, 4, 1}, {3, 1, 4}, {1, 4, 4} };
+		for ( int[] nums : nums27 ) {
+			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.pre4(nums)));
 		}
 		
 	}

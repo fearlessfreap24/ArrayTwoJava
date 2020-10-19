@@ -160,4 +160,77 @@ public class Methods2 {
 		return fizzar;
 	}
 
+	public int[] shiftLeft(int[] nums) {
+		
+//		Return an array that is "left shifted" by one -- so {6, 2, 5, 3} returns {2, 5, 3, 6}. You may modify and return 
+//		the given array, or return a new array.
+//
+//		shiftLeft([6, 2, 5, 3]) → [2, 5, 3, 6]
+//		shiftLeft([1, 2]) → [2, 1]
+//		shiftLeft([1]) → [1]
+		
+		if ( nums.length < 2 ) return nums;
+		
+		int holder = nums[0];
+		for ( int i = 0; i < nums.length - 1; i++ ) {
+			if ( i == nums.length - 1 ) nums[i] = holder;
+			else {
+				nums[i] = nums[i+1];
+			}			
+		}
+		nums[nums.length-1] = holder;
+		
+		return nums;
+	}
+
+	public int[] tenRun(int[] nums) {
+		
+//		For each multiple of 10 in the given array, change all the values following it to be that multiple of 10, until 
+//		encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.
+//
+//		tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
+//		tenRun([10, 1, 20, 2]) → [10, 10, 20, 20]
+//		tenRun([10, 1, 9, 20]) → [10, 10, 10, 20]
+		
+		boolean is10 = false;
+		int newNumber = 0;
+		
+		for ( int i = 0; i< nums.length; i++ ) {
+			if ( nums[i] % 10 == 0 ) {
+				is10 = true;
+				newNumber = nums[i] % 100;
+			}
+			else if ( is10 ) nums[i] = newNumber;
+		}
+		
+		return nums;
+	}
+
+	public int[] pre4(int[] nums) {
+
+//		Given a non-empty array of ints, return a new array containing the elements from the original array that come before 
+//		the first 4 in the original array. The original array will contain at least one 4. Note that it is valid in java to 
+//		create an array of length 0.
+//
+//		pre4([1, 2, 4, 1]) → [1, 2]
+//		pre4([3, 1, 4]) → [3, 1]
+//		pre4([1, 4, 4]) → [1]
+		
+		int indexOf4 = 0;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 4 ) {
+				indexOf4 = i;
+				break;
+			}
+		}
+		
+		if ( indexOf4 < 0 ) return nums;
+		int[] prefour = new int[indexOf4];
+		for ( int i = 0; i < indexOf4; i++ ) {
+			prefour[i] = nums[i];
+		}
+		return prefour;
+	}
+
 }
