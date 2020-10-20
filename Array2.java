@@ -151,9 +151,14 @@ public class Array2 {
 //			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.tenRun(nums)));
 //		}
 		
-		int[][] nums27 = { {1, 2, 4, 1}, {3, 1, 4}, {1, 4, 4} };
-		for ( int[] nums : nums27 ) {
-			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.pre4(nums)));
+//		int[][] nums27 = { {1, 2, 4, 1}, {3, 1, 4}, {1, 4, 4} };
+//		for ( int[] nums : nums27 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.pre4(nums)));
+//		}
+
+		int[][] nums28 = { {2, 4, 1, 2}, {4, 1, 4, 2}, { 4, 4, 1, 2, 3} };
+		for ( int[] nums : nums28 ){
+			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.post4(nums)));
 		}
 		
 	}

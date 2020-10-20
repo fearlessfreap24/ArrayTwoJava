@@ -233,4 +233,32 @@ public class Methods2 {
 		return prefour;
 	}
 
+	public int[] post4(int[] nums) {
+
+//		Given a non-empty array of ints, return a new array containing the elements from the original array that come
+//		after the last 4 in the original array. The original array will contain at least one 4. Note that it is valid in
+//		java to create an array of length 0.
+//
+//		post4([2, 4, 1, 2]) → [1, 2]
+//		post4([4, 1, 4, 2]) → [2]
+//		post4([4, 4, 1, 2, 3]) → [1, 2, 3]
+
+		int indexOf4 = 0;
+
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] == 4 ) {
+				indexOf4 = i;
+			}
+		}
+
+		if ( indexOf4 < 0 ) return nums;
+		int[] postfour = new int[nums.length-(indexOf4+1)];
+		indexOf4++;
+
+		for ( int i = 0; i < postfour.length; i++ ){
+			postfour[i] = nums[i+indexOf4];
+		}
+
+		return postfour;
+	}
 }
