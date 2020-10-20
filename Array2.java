@@ -156,9 +156,21 @@ public class Array2 {
 //			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.pre4(nums)));
 //		}
 
-		int[][] nums28 = { {2, 4, 1, 2}, {4, 1, 4, 2}, { 4, 4, 1, 2, 3} };
-		for ( int[] nums : nums28 ){
-			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.post4(nums)));
+//		int[][] nums28 = { {2, 4, 1, 2}, {4, 1, 4, 2}, { 4, 4, 1, 2, 3} };
+//		for ( int[] nums : nums28 ){
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.post4(nums)));
+//		}
+		
+//		int[][] nums29 = { {1, 2, 3}, {1, 2, 3, 2, 5, 2}, {3, 4} };
+//		int[] vals29 = { 2, 2, 3 };
+//		for ( int i = 0; i < vals29.length; i++ ) {
+//			System.out.printf("nums = %s, val = %d : %s\n", ats(nums29[i]), vals29[i],
+//					ats(m2.notAlone(nums29[i], vals29[i])));
+//		}
+		
+		int[][] nums30 = { {1, 0, 0, 1}, {0, 1, 1, 0, 1}, {1, 0} };
+		for ( int[] nums : nums30 ) {
+			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroFront(nums)));
 		}
 		
 	}
