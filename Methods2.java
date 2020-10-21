@@ -295,13 +295,13 @@ public class Methods2 {
 //		https://github.com/mm911/codingbat-solutions/blob/master/java/Array-2/zeroFront.java
 		
 		int count = 0;
-		  for (int i = 0; i < nums.length; i++) {
-		    if (nums[i] == 0) {
-		      nums[i] = nums[count];
-		      nums[count] = 0;
-		      count++;
-		    }
-		  }
-		  return nums;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 0) {
+				nums[i] = nums[count];
+				nums[count] = 0;
+				count++;
+			}
+		}
+		return nums;
 	}
 }
