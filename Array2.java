@@ -173,9 +173,19 @@ public class Array2 {
 //			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroFront(nums)));
 //		}
 
-		int[][] nums31 = { {1, 10, 10, 2}, {10, 2, 10}, {1, 99, 10} };
-		for ( int[] nums : nums31 ) {
-			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.withoutTen(nums)));
+//		int[][] nums31 = { {1, 10, 10, 2}, {10, 2, 10}, {1, 99, 10}, {10, 13, 10, 14} };
+//		for ( int[] nums : nums31 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.withoutTen(nums)));
+//		}
+		
+//		int[][] nums32 = { {0,5,0,3}, {0,4,0,3}, {0,1,0} };
+//		for ( int[] nums : nums32 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroMax(nums)));
+//		}
+		
+		int[][] nums33 = { {1,0,1,0,0,1,1}, {3, 3, 2}, {2,2,2} };
+		for ( int[] nums : nums33 ) {
+			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.evenOdd(nums)));
 		}
 		
 	}

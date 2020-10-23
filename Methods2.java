@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class Methods2 {
 
@@ -315,14 +316,60 @@ public class Methods2 {
 //		withoutTen([10, 2, 10]) → [2, 0, 0]
 //		withoutTen([1, 99, 10]) → [1, 99, 0]
 
-		int count = nums.length - 1;
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] % 10 == 0) {
-				nums[i] = nums[count];
-				nums[count] = 0;
-				count--;
+		int[] withoutten = new int[nums.length];
+		int count = 0;
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] % 10 == 0 ) {}
+			else {
+				withoutten[count] = nums[i];
+				count++;
 			}
 		}
+		return withoutten;
+	}
+
+	public int[] zeroMax(int[] nums) {
+		
+//		Return a version of the given array where each zero value in the array is replaced by the largest odd value to 
+//		the right of the zero in the array. If there is no odd value to the right of the zero, leave the zero as a zero.
+//
+//		zeroMax([0, 5, 0, 3]) → [5, 5, 3, 3]
+//		zeroMax([0, 4, 0, 3]) → [3, 4, 3, 3]
+//		zeroMax([0, 1, 0]) → [1, 1, 0]
+		
+		int maxodd = 0;
+		for ( int i = nums.length - 1; i >= 0; i-- ) {
+			if ( nums[i] % 2 == 1 ) maxodd = Math.max(maxodd, nums[i]);
+			if ( nums[i] == 0 ) nums[i] = maxodd;
+		}
+		
 		return nums;
+	}
+
+	public int[] evenOdd(int[] nums) {
+		
+//		Return an array that contains the exact same numbers as the given array, but rearranged so that all the even 
+//		numbers come before all the odd numbers. Other than that, the numbers can be in any order. You may modify and 
+//		return the given array, or make a new array.
+//
+//		evenOdd([1, 0, 1, 0, 0, 1, 1]) → [0, 0, 0, 1, 1, 1, 1]
+//		evenOdd([3, 3, 2]) → [2, 3, 3]
+//		evenOdd([2, 2, 2]) → [2, 2, 2]
+		
+		int[] evenodd = new int[nums.length];
+		int odd = nums.length - 1;
+		int even = 0;
+		
+		for ( int i = 0; i < nums.length; i++ ) {
+			if ( nums[i] % 2 == 0 ) {
+				evenodd[even] = nums[i];
+				even++;
+			}
+			else {
+				evenodd[odd] = nums[i];
+				odd--;
+			}
+		}
+		return evenodd;
 	}
 }
