@@ -168,9 +168,14 @@ public class Array2 {
 //					ats(m2.notAlone(nums29[i], vals29[i])));
 //		}
 		
-		int[][] nums30 = { {1, 0, 0, 1}, {0, 1, 1, 0, 1}, {1, 0} };
-		for ( int[] nums : nums30 ) {
-			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroFront(nums)));
+//		int[][] nums30 = { {1, 0, 0, 1}, {0, 1, 1, 0, 1}, {1, 0} };
+//		for ( int[] nums : nums30 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroFront(nums)));
+//		}
+
+		int[][] nums31 = { {1, 10, 10, 2}, {10, 2, 10}, {1, 99, 10} };
+		for ( int[] nums : nums31 ) {
+			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.withoutTen(nums)));
 		}
 		
 	}
