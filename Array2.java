@@ -183,9 +183,15 @@ public class Array2 {
 //			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.zeroMax(nums)));
 //		}
 		
-		int[][] nums33 = { {1,0,1,0,0,1,1}, {3, 3, 2}, {2,2,2} };
-		for ( int[] nums : nums33 ) {
-			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.evenOdd(nums)));
+//		int[][] nums33 = { {1,0,1,0,0,1,1}, {3, 3, 2}, {2,2,2} };
+//		for ( int[] nums : nums33 ) {
+//			System.out.printf("nums = %s : %s\n", ats(nums), ats(m2.evenOdd(nums)));
+//		}
+
+		int[][] nums34 = { {1, 6}, {1, 8}, {1, 11} };
+		for ( int[] nums : nums34 ){
+			System.out.printf("start = %d, end = %d : %s\n", nums[0], nums[1],
+					Arrays.toString(m2.fizzBuzz(nums[0], nums[1])));
 		}
 		
 	}
